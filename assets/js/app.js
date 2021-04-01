@@ -15,3 +15,6 @@ function Show() {
 function Hide(){
 	navList.classList.remove("_Menus-show");
 }
+
+let year = document.getElementById('year');
+year.innerHTML = new Date().getFullYear();
