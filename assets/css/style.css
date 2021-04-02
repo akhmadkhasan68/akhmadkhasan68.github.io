@@ -7,9 +7,6 @@
   -webkit-box-sizing: border-box;
 }
 
-a{
-  text-decoration: none;
-}
 
 body {
   margin: 0;
@@ -19,6 +16,16 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color:#fd9d49;
+}
+
+
+p{
+  font-size: 14px;
 }
 
 /*TEXT STYLING*/
@@ -315,8 +322,6 @@ html {
   background-position: 10px 10px; 
   background-repeat: no-repeat;
   padding: 10px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
 }
 
 textarea:focus, input:focus{
