@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+:root{
+  --primary-color: #fd9d49;
+  --secondary-color: #ffe0c4;
+  --grey-color: #b0b0b0;
+  --dark-color: #000;
+  --bg-light: #fff;
+  --bg-second: #f7f7f7;
+}
+
+.dark-mode{
+  --grey-color: #f7f7f7;
+  --dark-color: #fff;
+  --bg-light: #192734;
+  --bg-second: #15202b;
+  color: #f7f7f7;
+}
+
+* {
+  transition: background-color 0.1s ease;
+}
+
 *,
 *::before,
 *::after {
@@ -11,7 +32,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #f7f7f7;
+  background-color: var(--bg-second);
 }
 
 html {
@@ -20,21 +41,13 @@ html {
 
 a{
   text-decoration: none;
-  color:#fd9d49;
+  color:var(--primary-color);
 }
 
 
 p{
   font-size: 14px;
 }
-
-/*SCROLLBAR*/
-:root{
-  scrollbar-color: rgb(204, 204, 204) rgb(242, 242, 242) !important;
-  scrollbar-width: thin !important;
-  scrollbar-border-radius: 10px;
-}
-/*END SCROLLBAR*/
 
 
 /*TEXT STYLING*/
@@ -71,21 +84,22 @@ p{
 }
 
 .text-muted{
-  color: #b0b0b0;
+  color: var(--grey-color);
 }
 
 .text-default{
-  color: #000;
+  color: var(--dark-color);
 }
 
 .text-primary
 {
-  color: #fd9d49;
+  color: var(--primary-color);
 }
 
 .text-white{
   color:#fff;
 }
+
 /*END TEXT STYLING*/
 .mt-4{
   margin-top: 40px;
@@ -138,7 +152,7 @@ p{
 
 /*NAVBAR*/
 .nav {
-  background-color: #fff;
+  background-color: var(--bg-light);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,6 +189,13 @@ p{
   height: 60px;
 }
 
+.nav .logo a .logo-text{
+  margin-left: 20px; 
+  font-weight: bold; 
+  color: var(--dark-color);
+  font-size: 18px;
+}
+
 .nav .logo a img {
   max-width: 100%;
   max-height: 60px;
@@ -205,7 +226,7 @@ p{
 
 .nav .navbar ul li a {
   text-decoration: none;
-  color: black;
+  color: var(--dark-color);
   font-size: 18px;
   font-weight: 600;
   display: block;
@@ -218,13 +239,13 @@ p{
 
 .nav .navbar ul li a:hover {
   border-radius: 20px;
-  background-color: #f7f7f7;
+  background-color: var(--bg-second);
 }
 
 .nav .navbar ul li a.active {
-  color: #ffffff;
+  color: #fff;
   border-radius: 20px;
-  background: linear-gradient(156deg, #fd9d49 30%,#fcc68a 80%) !important;
+  background: linear-gradient(156deg, var(--primary-color) 30%,#fcc68a 80%) !important;
 }
 
 .nav .navbar ul .close {
@@ -236,7 +257,7 @@ p{
 .nav .navbar ul .close span {
   font-size: 20px;
   display: inline-block;
-  border: 1px solid #cccccc;
+  border: 1px solid #fff;
   padding: 0 10px;
   cursor: pointer;
 }
@@ -262,7 +283,7 @@ p{
 .footer {
   margin-top: 100px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--bg-light);
   -webkit-box-shadow: 0px 6px 31px -18px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 6px 31px -18px rgba(0,0,0,0.4);
   padding:20px 20px 20px 20px;
@@ -282,7 +303,7 @@ p{
 /*CARD*/
 .card{
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--bg-light);
   border-radius: 10px;
   -webkit-box-shadow: 0px 6px 31px -18px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 6px 31px -18px rgba(0,0,0,0.4);
@@ -295,7 +316,7 @@ p{
 
 .card-heading{
   padding:20px;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid var(--bg-second);
 }
 /*END CARD*/
 
@@ -308,7 +329,7 @@ p{
 
 .listgroup-items{
   display: block;
-  color: #000;
+  color: var(--dark-color);
   padding: 8px 16px;
   margin-top: 5px;
   transition: 0.3s;
@@ -319,8 +340,8 @@ p{
 }
 
 .listgroup-items:hover {
-  background-color: #f7f7f7;
-  color: #000;
+  background-color: var(--bg-second);
+  color: var(--dark-color);
 }
 
 
@@ -357,7 +378,7 @@ textarea:focus, input:focus{
 }
 
 .icon-circle{
-  background-color: #ffe0c4; 
+  background-color: var(--secondary-color); 
   border-radius: 10%; 
   padding: 5px 10px 5px 10px;
 }
@@ -388,7 +409,7 @@ button{
 
 .btn-primary{
   color: #fff;
-  background-color: #fd9d49;
+  background-color: var(--primary-color);
   -webkit-box-shadow: 0px 4px 28px -10px rgba(253,157,73,1);
   -moz-box-shadow: 0px 4px 28px -10px rgba(253,157,73,1);
   box-shadow: 0px 4px 28px -10px rgba(253,157,73,1);
@@ -515,6 +536,6 @@ button{
 /*END RESPONSIVE*/
 
 .bg-primary{
-  background-color: #fd9d49;
+  background-color: var(--primary-color);
   color: #fff;
 }
