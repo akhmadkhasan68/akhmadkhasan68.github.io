@@ -351,15 +351,19 @@ button{
 
 /*VERTICAL MENU*/
 input{
-  border: 1px solid #ccc;
+  border: 0px solid var(--grey-color);
   border-radius: 10px;
   padding: 10px;
+  background-color: var(--bg-second);
+  color: var(--dark-color);
 }
+
 
 /*INPUT BOX*/
 .form-control {
   width: 100%;
   box-sizing: border-box;
+  height: 40px;
 }
 
 textarea:focus, input:focus{
