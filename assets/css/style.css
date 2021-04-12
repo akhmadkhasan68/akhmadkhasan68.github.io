@@ -14,7 +14,7 @@
   --dark-color: #fff;
   --bg-light: #192734;
   --bg-second: #15202b;
-  color: #f7f7f7;
+  color: #fff;
 }
 
 * {
@@ -47,6 +47,10 @@ a{
 
 p{
   font-size: 14px;
+}
+
+button{
+  outline: none;
 }
 
 
@@ -393,6 +397,11 @@ button{
 
 .btn{
   border-radius: 10px;
+}
+
+.btn-block{
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-success{

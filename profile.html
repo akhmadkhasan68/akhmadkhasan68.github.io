@@ -29,7 +29,6 @@
 			    <li><a href="index.html">Home</a></li>
 			    <li><a href="profile.html" class="active">Profile</a></li>
 			    <li><a href="#">About</a></li>
-				<li><a href="#" onclick="switchMode()"><i id="btn-mode" class="fa fa-moon"></i></a></li>
 			</ul>
 		</div>
 	</div>
@@ -39,7 +38,14 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
-						<span class="h3 text-primary">My Profile</span>
+						<div class="row">
+							<div class="col-11">
+								<span class="h3 text-primary">Profile</span>
+							</div>
+							<div class="col-1">
+								<button class="btn btn-primary btn-block" onclick="switchMode()"><i id="btn-mode" class="fa fa-moon"></i></button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
