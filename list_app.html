@@ -82,8 +82,7 @@
 							<div class="col-9">
 								<span class="h5">Your List</span>
 								<br>
-								<span class="subtitle">You have <span id="pendingTasks" class="text-primary b"></span>
-									unfinished tasks</span>
+								<span class="subtitle" id="pendingTasks"></span>
 							</div>
 							<div class="col-3">
 								<button id="button-clear" class="btn btn-danger btn-block disabled"><i
@@ -182,7 +181,15 @@
 			}
 
 			const pendingTasksNumb = $("#pendingTasks");
-			pendingTasksNumb.html(listArray.length);
+			if(listArray.length > 0)
+			{
+				var htmlPendingTask = `You have <span class="text-primary b">${listArray.length}</span> unfinished tasks`;
+			}
+			else
+			{
+				var htmlPendingTask = `<span class="text-primary b">Congratulations!</span> you have completed all tasks`;
+			}
+			pendingTasksNumb.html(htmlPendingTask);
 
 			if (listArray.length > 0) {
 				clearAllBtn.removeClass("disabled");
