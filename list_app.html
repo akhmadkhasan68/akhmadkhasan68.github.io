@@ -134,18 +134,18 @@
 			let length = val.length;
 
 			if (length > 0) {
-				$('#button').removeClass('disabled');
+				addBtn.removeClass('disabled');
 			} else {
-				$('#button').addClass('disabled');
+				addBtn.addClass('disabled');
 			}
 		});
 
 		addBtn.on('click', function () {
 			let value = inputBox.val();
 			let getLocalStorageData = localStorage.getItem("MyList");
+
 			if (getLocalStorageData == null) {
 				listArray = [];
-				listArrayDate = [];
 			} else {
 				listArray = JSON.parse(getLocalStorageData);
 			}
@@ -154,12 +154,11 @@
 				alert('this field cannot empty');
 			} else {
 				let today = new Date();
-				let date = `${today.getDate()} ${monthNames[today.getMonth()+1]} ${today.getFullYear()}`;
-				let dateTime = date;
+				let date = `${today.getDate()} ${monthNames[today.getMonth()]} ${today.getFullYear()}`;
 
 				let arrayData = {
 					title: value,
-					date: dateTime
+					date: date
 				};
 
 				listArray.push(arrayData);
@@ -210,7 +209,23 @@
 
 			});
 
+			if(listArray.length == 0)
+			{
+				newLiTag = `
+					<li class="listgroup-items">	
+						<div class="row justify-content-between">
+							<div class="col-6">
+                        		<img src="assets/img/chill.svg" class="img-responsive">
+							</div>
+						</div>
+                    </li>
+				`;
+			}
+
+			todoList.hide();
 			todoList.html(newLiTag);
+			todoList.slideDown();
+			
 			inputBox.val("");
 		}
 

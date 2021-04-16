@@ -1,26 +1,26 @@
-$(document).ready(
-    function(){
-        $('#button').click(
-            function(){
-                var toAdd = $('input[name=ListItem]').val();
-                 $('ol').append('<li>' + toAdd + '</li>');
-            });
+// $(document).ready(
+//     function(){
+//         $('#button').click(
+//             function(){
+//                 var toAdd = $('input[name=ListItem]').val();
+//                  $('ol').append('<li>' + toAdd + '</li>');
+//             });
        
-       $("input[name=ListItem]").keyup(function(event){
-          if(event.keyCode == 13){
-            $("#button").click();
-          }         
-      });
+//        $("input[name=ListItem]").keyup(function(event){
+//           if(event.keyCode == 13){
+//             $("#button").click();
+//           }         
+//       });
       
-      $(document).on('dblclick','li', function(){
-        $(this).toggleClass('strike').fadeOut('slow');    
-      });
+//       $(document).on('dblclick','li', function(){
+//         $(this).toggleClass('strike').fadeOut('slow');    
+//       });
       
-      $('input').focus(function() {
-        $(this).val('');
-      });
+//       $('input').focus(function() {
+//         $(this).val('');
+//       });
       
-      $('ol').sortable();  
+//       $('ol').sortable();  
   
-    }
-);
+//     }
+// );
